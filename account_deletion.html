@@ -5,137 +5,258 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>배달기록 계정 삭제 안내</title>
   <style>
+    :root {
+      --bg: #f5f8fc;
+      --card: #ffffff;
+      --text: #111827;
+      --sub: #5b6472;
+      --line: #e6ebf2;
+      --primary: #2f6bff;
+      --soft: #eef5ff;
+      --soft-red: #fff3f3;
+      --soft-yellow: #fff8e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      background: #f6f7fb;
-      color: #222;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.7;
     }
 
     .wrap {
-      max-width: 760px;
+      max-width: 860px;
       margin: 0 auto;
-      padding: 40px 20px 80px;
+      padding: 24px 16px 48px;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #eef5ff 0%, #ffffff 100%);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 28px 24px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--sub);
+      font-size: 15px;
     }
 
     .card {
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 28px 24px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    }
-
-    h1 {
-      margin-top: 0;
-      font-size: 28px;
-      line-height: 1.35;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 22px 20px;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 24px rgba(17, 24, 39, 0.04);
     }
 
     h2 {
-      margin-top: 32px;
+      margin: 0 0 12px;
       font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
     }
 
-    p, li {
-      font-size: 16px;
+    p {
+      margin: 0 0 10px;
+      font-size: 15px;
     }
 
     ul {
+      margin: 8px 0 0;
       padding-left: 20px;
     }
 
-    .brand {
-      margin-top: 12px;
-      font-size: 14px;
-      color: #666;
+    li {
+      margin: 6px 0;
+      font-size: 15px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eaf2ff;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .brand-box {
+      background: var(--soft);
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin-top: 14px;
     }
 
     .email-box {
-      margin-top: 20px;
-      padding: 16px;
-      background: #f1f4ff;
-      border-radius: 14px;
-      font-weight: bold;
+      margin-top: 14px;
+      padding: 16px 18px;
+      background: var(--soft);
+      border-radius: 18px;
+      font-weight: 700;
       word-break: break-all;
     }
 
     .notice {
-      margin-top: 20px;
-      padding: 16px;
-      background: #fff8e8;
-      border-radius: 14px;
+      margin-top: 12px;
+      padding: 16px 18px;
+      background: var(--soft-yellow);
+      border-radius: 18px;
+    }
+
+    .warning {
+      margin-top: 12px;
+      padding: 16px 18px;
+      background: var(--soft-red);
+      border-radius: 18px;
     }
 
     .footer {
-      margin-top: 28px;
+      margin-top: 8px;
+      color: var(--sub);
       font-size: 14px;
-      color: #666;
+      text-align: center;
+    }
+
+    .muted {
+      color: var(--sub);
     }
 
     a {
-      color: #2b59ff;
+      color: var(--primary);
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
     }
+
+    strong {
+      font-weight: 800;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="card">
+    <section class="hero">
+      <div class="badge">GEUN STUDIO · Account Deletion</div>
       <h1>배달기록 계정 삭제 안내</h1>
-
       <p>
-        배달기록은 앱 내 회원탈퇴 기능 또는 아래 문의 이메일을 통해
+        배달기록은 앱 내 회원탈퇴 기능 또는 문의 이메일을 통해
         계정 및 기록 데이터 삭제를 요청할 수 있습니다.
       </p>
-
-      <div class="brand">
-        GEUN STUDIO / 운영자: 박근영 / 문의: pgy2785@gmail.com
+      <div class="brand-box">
+        <p><strong>GEUN STUDIO / 운영자: 박근영 / 문의: pgy2785@gmail.com</strong></p>
+        <p class="muted">앱 내부 회원탈퇴 안내와 외부 공개 페이지의 내용을 최대한 일치시키기 위해 본 문서를 운영합니다.</p>
       </div>
+    </section>
 
-      <h2>삭제 방법</h2>
+    <section class="card">
+      <h2>1. 삭제 요청 방법</h2>
       <ul>
-        <li>앱에 로그인한 뒤 설정 화면에서 <strong>회원탈퇴</strong>를 진행할 수 있습니다.</li>
-        <li>앱 사용이 어렵거나 별도 요청이 필요한 경우 아래 이메일로 문의해 주세요.</li>
+        <li>앱에 로그인한 뒤 <strong>설정 → 회원탈퇴</strong>를 통해 계정 삭제를 진행할 수 있습니다.</li>
+        <li>앱 사용이 어렵거나 별도 확인이 필요한 경우, 아래 문의 이메일을 통해 삭제 요청을 보낼 수 있습니다.</li>
       </ul>
 
       <div class="email-box">
         문의 이메일:
         <a href="mailto:pgy2785@gmail.com">pgy2785@gmail.com</a>
       </div>
+    </section>
 
-      <h2>삭제 시 처리되는 내용</h2>
+    <section class="card">
+      <h2>2. 앱 내 회원탈퇴 진행 시 참고사항</h2>
+      <p>
+        앱 보안 정책에 따라 최근 로그인 상태가 아닌 경우,
+        회원탈퇴 전에 다시 로그인해 달라는 안내가 표시될 수 있습니다.
+      </p>
+      <p>
+        이 경우 설정에서 로그아웃한 뒤 Google로 다시 로그인하고,
+        회원탈퇴를 다시 진행해 주세요.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>3. 삭제 시 처리되는 내용</h2>
+      <p>삭제 요청이 정상 처리되면 다음 정보가 삭제 대상에 포함될 수 있습니다.</p>
       <ul>
         <li>배달기록 계정 정보</li>
         <li>앱에 저장된 배달 기록 데이터</li>
         <li>관련 사용자 문서 정보</li>
       </ul>
-
       <div class="notice">
-        삭제 요청이 처리되면 계정 및 기록 데이터는 복구가 어려울 수 있습니다.
+        삭제 요청은 확인 절차 후 순차적으로 처리될 수 있으며,
+        처리 완료 이후에는 복구가 어려울 수 있습니다.
       </div>
+    </section>
 
-      <h2>플러스 구독 이용 중인 경우</h2>
+    <section class="card">
+      <h2>4. 플러스 구독 이용 중인 경우</h2>
       <p>
-        배달기록 플러스 구독 중인 경우에는 먼저
-        <strong>Google Play 스토어의 정기결제 메뉴에서 구독을 해지</strong>한 뒤
-        계정 삭제를 요청해 주세요.
+        배달기록 플러스 구독 중인 경우,
+        <strong>앱 계정 삭제와 구독 해지는 별도로 처리</strong>됩니다.
       </p>
-
       <p>
-        구독 해지는 Google Play를 통해 관리되며,
-        환불 및 결제 관련 정책은 Google Play 정책이 우선 적용됩니다.
+        진행 중인 정기결제가 있다면 먼저
+        <strong>Google Play 스토어의 정기결제 메뉴에서 구독을 해지</strong>
+        해 주세요.
       </p>
-
-      <div class="footer">
-        운영: GEUN STUDIO / 운영자: 박근영<br />
-        문의: <a href="mailto:pgy2785@gmail.com">pgy2785@gmail.com</a>
+      <p>
+        결제, 해지, 환불과 관련된 정책은 Google Play 정책이 우선 적용됩니다.
+      </p>
+      <div class="warning">
+        앱을 삭제하거나 회원탈퇴를 진행하더라도,
+        Google Play에서 구독을 별도로 해지하지 않으면 정기결제가 계속될 수 있습니다.
       </div>
-    </div>
+    </section>
+
+    <section class="card">
+      <h2>5. 관련 정책 안내</h2>
+      <p>
+        개인정보 처리 및 데이터 보관/삭제 기준에 대한 자세한 내용은
+        아래 개인정보처리방침 페이지에서 확인할 수 있습니다.
+      </p>
+      <p>
+        <a href="./privacy_policy.html">개인정보처리방침 보기</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>6. 문의처</h2>
+      <ul>
+        <li>브랜드: GEUN STUDIO</li>
+        <li>운영자: 박근영</li>
+        <li>문의 이메일: <a href="mailto:pgy2785@gmail.com">pgy2785@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>7. 시행일 및 변경</h2>
+      <p>본 계정 삭제 안내 페이지 시행일은 2026년 3월 22일입니다.</p>
+      <p>
+        본 안내는 서비스 내용, 운영 정책 또는 관련 절차 변경에 따라 수정될 수 있으며,
+        변경 시 최신 내용을 앱 내부 안내와 본 페이지에 반영합니다.
+      </p>
+    </section>
+
+    <p class="footer">© GEUN STUDIO · 배달기록. All rights reserved.</p>
   </div>
 </body>
 </html>
