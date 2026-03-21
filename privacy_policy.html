@@ -12,6 +12,9 @@
       --sub: #5b6472;
       --line: #e6ebf2;
       --primary: #2f6bff;
+      --soft: #eef5ff;
+      --soft-green: #f3faf5;
+      --soft-yellow: #fff8e8;
     }
 
     * {
@@ -106,6 +109,20 @@
       margin-bottom: 12px;
     }
 
+    .notice {
+      background: var(--soft-yellow);
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin-top: 12px;
+    }
+
+    .brand-box {
+      background: var(--soft-green);
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin-top: 12px;
+    }
+
     a {
       color: var(--primary);
       text-decoration: none;
@@ -114,38 +131,48 @@
     a:hover {
       text-decoration: underline;
     }
+
+    strong {
+      font-weight: 800;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <section class="hero">
-      <div class="badge">배달기록 Privacy Policy</div>
+      <div class="badge">GEUN STUDIO · 배달기록 Privacy Policy</div>
       <h1>개인정보처리방침</h1>
       <p>
         배달기록(이하 "앱")은 이용자의 개인정보를 중요하게 생각하며,
         서비스 제공에 필요한 범위 내에서만 정보를 처리합니다.
       </p>
+      <div class="brand-box">
+        <p><strong>GEUN STUDIO / 운영자: 박근영 / 문의: pgy2785@gmail.com</strong></p>
+        <p class="muted">앱 내부 안내와 외부 공개 페이지의 정책 내용을 최대한 일치시키기 위해 본 문서를 운영합니다.</p>
+      </div>
     </section>
 
     <section class="card">
       <h2>1. 수집하거나 처리할 수 있는 정보</h2>
-      <p>앱은 다음 정보를 수집하거나 처리할 수 있습니다.</p>
+      <p>앱은 서비스 제공 과정에서 다음 정보를 수집하거나 처리할 수 있습니다.</p>
       <ul>
-        <li>Google 로그인 시 제공되는 계정 정보(예: 이메일, 표시 이름)</li>
+        <li>Google 로그인 시 제공되는 계정 정보(예: 이메일, 표시 이름, 프로필 이미지)</li>
         <li>사용자가 직접 입력한 기록 정보(수입/지출, 금액, 메모, 플랫폼, 날짜)</li>
-        <li>로그인, 데이터 저장, 서비스 운영에 필요한 기술적 정보</li>
-        <li>광고 제공 및 성과 측정을 위해 Google AdMob(Google Mobile Ads SDK)을 통해 광고 식별자, 기기 식별자, IP 주소, 앱 사용/상호작용 정보, 진단 정보가 처리될 수 있습니다.</li>
+        <li>로그인, 데이터 저장, 오류 대응, 서비스 운영에 필요한 기술적 정보</li>
+        <li>광고 제공 및 성과 측정 과정에서 처리될 수 있는 광고 식별자, 기기 식별자, IP 주소, 앱 사용 및 상호작용 정보, 진단 정보</li>
+        <li>플러스 정기결제 이용 시 Google Play 결제 시스템을 통해 처리될 수 있는 결제 정보 및 구독 상태 정보</li>
       </ul>
     </section>
 
     <section class="card">
       <h2>2. 정보 이용 목적</h2>
       <ul>
-        <li>Google 로그인 기능 제공</li>
-        <li>사용자별 기록 저장 및 조회</li>
-        <li>달력, 통계, 기록 관리 기능 제공</li>
+        <li>Google 로그인 기능 제공 및 계정 식별</li>
+        <li>사용자별 기록 저장, 조회, 수정, 삭제 기능 제공</li>
+        <li>달력, 통계, 기록 관리, 내보내기 등 앱 기능 제공</li>
         <li>광고 제공 및 광고 성과 측정</li>
-        <li>서비스 안정성 유지, 오류 대응 및 비정상 이용 방지</li>
+        <li>플러스 정기결제 처리 및 이용 상태 확인</li>
+        <li>서비스 안정성 유지, 오류 대응, 비정상 이용 방지</li>
       </ul>
     </section>
 
@@ -157,31 +184,62 @@
         <li>Firebase Authentication</li>
         <li>Cloud Firestore</li>
         <li>Google AdMob (Google Mobile Ads SDK)</li>
+        <li>Google Play Billing</li>
       </ul>
       <p class="muted">
-        위 서비스는 로그인, 계정 식별, 데이터 저장, 광고 제공 및 측정, 앱 운영을 위해 사용될 수 있습니다.
+        위 서비스들은 로그인, 계정 식별, 데이터 저장, 광고 제공 및 측정, 정기결제 처리, 앱 운영을 위해 사용될 수 있습니다.
       </p>
     </section>
 
     <section class="card">
-      <h2>4. 보관 및 관리</h2>
+      <h2>4. 광고 및 광고 관련 정보</h2>
       <p>
-        사용자가 입력한 기록 데이터는 사용자별 경로로 분리되어 저장되며,
-        앱의 핵심 기능 제공을 위해 필요한 범위 내에서 보관됩니다.
+        앱은 광고 제공 및 성과 측정을 위해 Google AdMob(Google Mobile Ads SDK)을 사용할 수 있습니다.
       </p>
       <p>
-        정보는 서비스 제공 목적이 달성될 때까지 또는 이용자의 삭제 요청이 있을 때까지
-        보관될 수 있으며, 관계 법령에 따라 보관이 필요한 경우 해당 법령을 따릅니다.
+        이 과정에서 광고 식별자, 기기 식별자, IP 주소, 앱 사용 및 상호작용 정보, 진단 정보가 처리될 수 있습니다.
+      </p>
+      <div class="notice">
+        <p>
+          무료 체험 종료 후에는 광고 시청을 통해 추가 기능 사용권이 지급될 수 있으며,
+          실제 광고 처리와 관련된 정책은 Google 및 관련 서비스 정책을 따를 수 있습니다.
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>5. 플러스 정기결제 및 구독 정보</h2>
+      <p>
+        앱은 배달기록 플러스 이용을 위해 Google Play 결제 시스템(Google Play Billing)을 사용할 수 있습니다.
+      </p>
+      <ul>
+        <li>플러스 이용 시 결제 정보 및 구독 상태 정보가 처리될 수 있습니다.</li>
+        <li>결제, 해지, 환불은 Google Play 정책이 우선 적용됩니다.</li>
+        <li>구독은 Google Play 스토어의 정기결제 메뉴에서 관리할 수 있습니다.</li>
+      </ul>
+      <div class="notice">
+        <p>
+          앱 삭제 또는 회원탈퇴와 구독 해지는 별도로 처리됩니다.
+          진행 중인 정기결제가 있다면 Google Play에서 별도로 해지해야 합니다.
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>6. 정보 보관 및 관리</h2>
+      <p>
+        사용자가 입력한 기록 데이터는 사용자별 경로(users/{uid}/records)에 분리되어 저장될 수 있으며,
+        필요한 범위 내에서 접근 통제, 사용자별 데이터 분리 저장, 보안이 적용된 통신 환경 등을 통해 관리됩니다.
       </p>
       <p>
-        앱은 개인정보 보호를 위해 필요한 범위 내에서 접근 통제, 사용자별 데이터 분리 저장,
-        보안이 적용된 통신 환경 등을 통해 정보를 관리합니다.
+        정보는 서비스 제공 목적이 달성될 때까지 또는 이용자의 삭제 요청이 있을 때까지 보관될 수 있고,
+        관계 법령에 따라 보관이 필요한 경우 해당 법령을 따를 수 있습니다.
       </p>
     </section>
 
     <section class="card">
-      <h2>5. 이용자의 권리</h2>
-      <p>이용자는 자신의 정보에 대해 다음 권리를 가질 수 있습니다.</p>
+      <h2>7. 이용자의 권리</h2>
+      <p>이용자는 자신의 정보에 대해 다음과 같은 요청을 할 수 있습니다.</p>
       <ul>
         <li>정보 열람 요청</li>
         <li>정보 수정 요청</li>
@@ -189,48 +247,52 @@
         <li>회원탈퇴 및 계정 삭제 요청</li>
       </ul>
       <p>
-        이용자는 앱에서 제공하는 회원탈퇴 기능 또는 아래 문의처를 통해 관련 요청을 진행할 수 있습니다.
+        앱에서 제공하는 회원탈퇴 기능 또는 아래 문의처를 통해 관련 요청을 진행할 수 있습니다.
       </p>
     </section>
 
     <section class="card">
-      <h2>6. 회원탈퇴 및 데이터 삭제</h2>
+      <h2>8. 회원탈퇴 및 데이터 삭제</h2>
       <p>
         이용자가 앱 내 회원탈퇴를 진행하거나 문의 이메일을 통해 삭제를 요청하는 경우,
         사용자 계정 정보와 기록 데이터는 확인 절차 후 순차적으로 삭제될 수 있습니다.
       </p>
       <p>
-        삭제가 완료된 이후에는 복구가 어려울 수 있으므로, 요청 전 신중히 확인해 주세요.
+        삭제 완료 후에는 복구가 어려울 수 있으므로 신중히 진행해 주세요.
+      </p>
+      <p>
+        계정 삭제 방법은 별도 안내 페이지에서도 확인할 수 있습니다:
+        <a href="./account_deletion.html">계정 삭제 안내 보기</a>
       </p>
     </section>
 
     <section class="card">
-      <h2>7. 아동의 개인정보</h2>
+      <h2>9. 아동의 개인정보</h2>
       <p>
         앱은 아동을 주된 이용 대상으로 하지 않습니다.
       </p>
     </section>
 
     <section class="card">
-      <h2>8. 문의처</h2>
+      <h2>10. 문의처</h2>
       <p>개인정보 관련 문의 및 요청은 아래 연락처로 문의해 주세요.</p>
       <ul>
+        <li>브랜드: GEUN STUDIO</li>
         <li>운영자: 박근영</li>
         <li>문의 이메일: <a href="mailto:pgy2785@gmail.com">pgy2785@gmail.com</a></li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>9. 시행일 및 변경</h2>
-      <p>본 개인정보처리방침 시행일은 2026년 3월 13일입니다.</p>
-      <p>최종 수정일은 2026년 3월 16일입니다.</p>
+      <h2>11. 시행일 및 변경</h2>
+      <p>본 개인정보처리방침 시행일은 2026년 3월 22일입니다.</p>
       <p>
         본 방침은 서비스 내용, 운영 정책 또는 관련 법령 변경에 따라 수정될 수 있으며,
-        변경 시 최신 내용을 본 페이지에 반영합니다.
+        변경 시 최신 내용을 앱 내부 안내와 본 페이지에 반영합니다.
       </p>
     </section>
 
-    <p class="footer">© 배달기록. All rights reserved.</p>
+    <p class="footer">© GEUN STUDIO · 배달기록. All rights reserved.</p>
   </div>
 </body>
 </html>
