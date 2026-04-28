@@ -59,31 +59,43 @@
       font-size: 14px;
       color: #111827;
       background: #f3f4f6;
-      padding: 14px 16px;
+      padding: 16px 18px;
       border-radius: 10px;
       margin-top: 10px;
-      line-height: 1.8;
     }
 
     .owner-info .owner-title {
       font-size: 13px;
       font-weight: 800;
       color: #6b7280;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
       letter-spacing: 0.5px;
     }
 
     .owner-info .owner-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 6px;
       font-size: 14px;
-      font-weight: 600;
-      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    .owner-info .owner-row:last-child {
+      margin-bottom: 0;
     }
 
     .owner-info .owner-label {
-      display: inline-block;
-      min-width: 92px;
+      flex: 0 0 110px;
       color: #6b7280;
       font-weight: 500;
+    }
+
+    .owner-info .owner-value {
+      flex: 1;
+      color: #1f2937;
+      font-weight: 600;
+      word-break: break-all;
     }
 
     h2 {
@@ -192,7 +204,7 @@
         color: #9ca3af;
       }
 
-      .owner-info .owner-row {
+      .owner-info .owner-value {
         color: #f3f4f6;
       }
 
@@ -241,8 +253,15 @@
         font-size: 14px;
       }
 
+      .owner-info .owner-row {
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 10px;
+      }
+
       .owner-info .owner-label {
-        min-width: 80px;
+        flex: 0 0 auto;
+        font-size: 12px;
       }
     }
   </style>
@@ -261,11 +280,26 @@
       </p>
       <div class="owner-info">
         <div class="owner-title">사업자 정보</div>
-        <div class="owner-row"><span class="owner-label">상호</span>근스튜디오 (GEUN STUDIO)</div>
-        <div class="owner-row"><span class="owner-label">대표자</span>박근영</div>
-        <div class="owner-row"><span class="owner-label">사업자 등록번호</span>299-41-01451</div>
-        <div class="owner-row"><span class="owner-label">사업장 주소</span>전라남도 순천시 서면 선평동선길 12 (포레나 순천)</div>
-        <div class="owner-row"><span class="owner-label">문의 이메일</span><a href="mailto:pgy2785@gmail.com">pgy2785@gmail.com</a></div>
+        <div class="owner-row">
+          <span class="owner-label">상호</span>
+          <span class="owner-value">근스튜디오 (GEUN STUDIO)</span>
+        </div>
+        <div class="owner-row">
+          <span class="owner-label">대표자</span>
+          <span class="owner-value">박근영</span>
+        </div>
+        <div class="owner-row">
+          <span class="owner-label">사업자 등록번호</span>
+          <span class="owner-value">299-41-01451</span>
+        </div>
+        <div class="owner-row">
+          <span class="owner-label">사업장 주소</span>
+          <span class="owner-value">전라남도 순천시 서면 선평동선길 12 (포레나 순천)</span>
+        </div>
+        <div class="owner-row">
+          <span class="owner-label">문의 이메일</span>
+          <span class="owner-value"><a href="mailto:pgy2785@gmail.com">pgy2785@gmail.com</a></span>
+        </div>
       </div>
     </header>
 
