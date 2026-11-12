@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배달기록 - 배달 라이더 가계부</title>
+  <meta name="description" content="GEUN STUDIO 배달기록 앱 소개 페이지입니다.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+        'Malgun Gothic', 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      color: #1f2937;
+      background: #f9fafb;
+      padding: 24px 16px 48px;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 32px 24px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+    header {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e5e7eb;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+    .lead {
+      font-size: 15px;
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .owner-info {
+      font-size: 14px;
+      color: #111827;
+      background: #f3f4f6;
+      padding: 16px 18px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    .owner-info .owner-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #6b7280;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+    .owner-info .owner-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 6px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .owner-info .owner-row:last-child {
+      margin-bottom: 0;
+    }
+    .owner-info .owner-label {
+      flex: 0 0 110px;
+      color: #6b7280;
+      font-weight: 500;
+    }
+    .owner-info .owner-value {
+      flex: 1;
+      color: #1f2937;
+      font-weight: 600;
+      word-break: break-all;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #111827;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      padding-top: 4px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #374151;
+      margin-bottom: 10px;
+    }
+    ul {
+      margin: 10px 0 10px 20px;
+    }
+    li {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .highlight-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 14px 0;
+    }
+    .highlight-box p {
+      font-size: 14px;
+      color: #1e3a8a;
+      margin-bottom: 6px;
+    }
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+    .version-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 13px;
+      color: #6b7280;
+      text-align: center;
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #111827;
+        color: #e5e7eb;
+      }
+      .container {
+        background: #1f2937;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+      }
+      h1, h2 {
+        color: #f9fafb;
+      }
+      .lead, p, li {
+        color: #d1d5db;
+      }
+      header, footer {
+        border-color: #374151;
+      }
+      .owner-info {
+        background: #374151;
+        color: #f9fafb;
+      }
+      .owner-info .owner-title {
+        color: #9ca3af;
+      }
+      .owner-info .owner-value {
+        color: #f3f4f6;
+      }
+      .owner-info .owner-label {
+        color: #9ca3af;
+      }
+      .highlight-box {
+        background: #1e3a8a33;
+        border-color: #1e40af;
+      }
+      .highlight-box p {
+        color: #93c5fd;
+      }
+      .version-badge {
+        background: #1e40af;
+        color: #dbeafe;
+      }
+      a {
+        color: #60a5fa;
+      }
+    }
+    @media (max-width: 480px) {
+      body {
+        padding: 16px 12px 32px;
+      }
+      .container {
+        padding: 24px 18px;
+        border-radius: 12px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      h2 {
+        font-size: 17px;
+      }
+      p, li {
+        font-size: 14px;
+      }
+      .owner-info .owner-row {
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 10px;
+      }
+      .owner-info .owner-label {
+        flex: 0 0 auto;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>배달기록</h1>
+      <p class="lead">배달 라이더 가계부</p>
+    </header>
+    <h2>주요 기능</h2>
+    <ul>
+      <li>오늘 수익, 잊지 말고 기록하세요 — 기록만 하면 앱이 알아서 정리해요</li>
+      <li>수익도 지출도 한눈에 확인하세요 — 달력·통계로 흐름이 정리돼요</li>
+      <li>운행 시간 기록 — 기록으로 더 정확한 수익을 확인하세요</li>
+      <li>이 날 동선 보기 — 지도에서 하루 이동 경로 확인</li>
+      <li>다른 라이더들과 함께하세요 — 수익 인증하고 꿀팁도 나눠요</li>
+    </ul>
+    <h2>다운로드</h2>
+    <div class="highlight-box">
+      <p><a href="https://play.google.com/store/apps/details?id=com.geunstudio.baedalgirok">Google Play 에서 배달기록 받기</a></p>
+    </div>
+    <h2>운영자 · 문의</h2>
+    <div class="owner-info">
+      <div class="owner-row">
+        <span class="owner-label">운영자</span>
+        <span class="owner-value">GEUN STUDIO</span>
+      </div>
+      <div class="owner-row">
+        <span class="owner-label">문의 이메일</span>
+        <span class="owner-value"><a href="mailto:pgy2785@gmail.com">pgy2785@gmail.com</a></span>
+      </div>
+    </div>
+    <h2>안내</h2>
+    <ul>
+      <li><a href="https://pgy2785.github.io/privacy_policy.html">개인정보처리방침</a></li>
+      <li><a href="https://pgy2785.github.io/account_deletion.html">계정 삭제 안내</a></li>
+    </ul>
+    <footer>
+      &copy; 근스튜디오 (GEUN STUDIO) · 배달기록. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
